@@ -80,3 +80,21 @@ Install requirements:
 ```
 pip install -r requirements.txt
 ```
+
+Unit test using pytest:
+
+```
+pytest test/
+```
+
+Unit test with coverage:
+
+```
+pytest --cov=src --cov-report html:coverage_html test/
+```
+
+Format code with black:
+
+```
+black .
+```

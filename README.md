@@ -98,5 +98,3 @@ Format code with black:
 ```
 black .
 ```
-
-

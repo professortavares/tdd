@@ -29,7 +29,7 @@ jobs:
 
     - name: Create .nojekyll file
       run: |
-        touch docs/build/html/.nojekyll
+        touch docs/_build/html/.nojekyll
 
     - name: Publish documentation
       uses: peaceiris/actions-gh-pages@v3

@@ -46,7 +46,8 @@ def test_normalize_collumns_verify_collumns_sucess():
     # the dataframe has the same columns as the original dataframe
     assert all(result.columns == df.columns)
     # all the values in the dataframe are greater than 0 and less than 1
-    assert all(result.values >= 0) and all(result.values <= 1)
+    is_in_range = result.applymap(lambda x: 0 <= x <= 1).all().all()
+    assert is_in_range
 
 
 
@@ -96,8 +97,8 @@ def test_normalize_collumns_less_columns():
     # setup #
     #########
     # Prepares the test environment (preconditions)
-    df = pd.DataFrame(np.random.randint(1, 100, size=(100, 10)), columns=[
-                        'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age', 'Outcome', 'OtherCollumn'])
+    df = pd.DataFrame(np.random.randint(1, 100, size=(100, 8)), columns=[
+                        'Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age'])
 
     #############
     # execution #

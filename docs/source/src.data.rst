@@ -4,10 +4,10 @@ src.data package
 Submodules
 ----------
 
-src.data.make\_dataset module
------------------------------
+src.data.preprocess module
+--------------------------
 
-.. automodule:: src.data.make_dataset
+.. automodule:: src.data.preprocess
    :members:
    :undoc-members:
    :show-inheritance:

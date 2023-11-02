@@ -8,6 +8,7 @@ Subpackages
    :maxdepth: 4
 
    src.data
+   src.exceptions
    src.features
    src.models
    src.visualization

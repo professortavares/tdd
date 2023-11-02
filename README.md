@@ -90,7 +90,7 @@ pytest test/
 Unit test with coverage:
 
 ```
-pytest --cov=src --cov-report html:coverage_html test/
+pytest --cov=src -cov-config=.coveragerc --cov-report html:coverage_html test/
 ```
 
 Format code with black:

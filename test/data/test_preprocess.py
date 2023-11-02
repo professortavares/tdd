@@ -126,11 +126,11 @@ def test_normalize_collumns_wrong_values():
     # setup #
     #########
     # Prepares the test environment (preconditions)
-    df = pd.DataFrame(np.random.randint(1, 100, size=(100, 9)), columns=[
+    df = pd.DataFrame(np.random.randint(1, 100, size=(1000, 9)), columns=[
                         'Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age', 'Outcome'])
     # some pregnancies with negative values, to simulate an error
-    # if the value of pregancies is less than 5, then it will be negative
-    df.loc[df['Pregnancies'] < 5, 'Pregnancies'] = -1
+    # if the value of pregancies is less than 50, then it will be negative
+    df.loc[df['Pregnancies'] < 50, 'Pregnancies'] = -1
 
     #############
     # execution #

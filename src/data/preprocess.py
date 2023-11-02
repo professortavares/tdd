@@ -44,6 +44,10 @@ class Preprocess:
         if len(r) > 0:
             raise PreprocessException("more columns than expected")
 
+        # check if the dataframe pregancies column has only positive values
+        if (df['Pregnancies'] < 0).any():
+            raise PreprocessException("wrong values in the dataframe")
+
         # normalize the dataframe
         df = (df - df.min()) / (df.max() - df.min())
 

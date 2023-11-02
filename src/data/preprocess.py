@@ -17,6 +17,15 @@ class Preprocess:
         -------
             - pd.DataFrame
                 Dataframe normalized
+
+        Exemple of use:
+        ---------------
+            >>> import pandas as pd
+            >>> from src.data.preprocess import Preprocess as pp
+            >>> df = pd.DataFrame(np.random.randint(1, 100, size=(100, 9)), columns=[
+            ...                     'Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin', 'BMI', 'DiabetesPedigreeFunction', 'Age', 'Outcome'])
+            >>> result = pp.normalize_collumns(df)
+            >>> result
         """
 
         # Validation of the dataframe
